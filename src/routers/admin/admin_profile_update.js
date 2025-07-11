@@ -17,5 +17,5 @@ let upload = multer({
   }),
 });
 
-router.put("/update_profile", auth, upload.single("admin_image"), Update_admin);
+router.put("/update_profile", upload.single("admin_image"), Update_admin);
 module.exports = router;

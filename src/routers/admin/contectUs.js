@@ -8,9 +8,9 @@ const {
 let router = express.Router();
 let auth = require("../../../auth/adminauth");
 
-router.get("/getContectUs", auth, getContactUs);
+router.get("/getContectUs",  getContactUs);
 router.post("/addContactUs", addContactUs);
-router.patch("/contectUs/:id", auth, updateContactUsStatus);
+router.patch("/contectUs/:id",  updateContactUsStatus);
 router.delete("/deleteContectUs/:id", auth, deleteContactUs);
 
 module.exports = router;

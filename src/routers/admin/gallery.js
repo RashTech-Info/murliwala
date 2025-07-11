@@ -57,15 +57,15 @@ const mediaField = upload.fields([
 
 
 // Gallery Category
-router.post("/addGalleryCategory", auth, addGalleryCategory);
-router.put("/updateGalleryCategory/:id", auth, updateGalleryCategory);
-router.delete("/deleteGalleryCategory/:id", auth, deleteGalleryCategory);
+router.post("/addGalleryCategory",  addGalleryCategory);
+router.put("/updateGalleryCategory/:id",  updateGalleryCategory);
+router.delete("/deleteGalleryCategory/:id",  deleteGalleryCategory);
 router.get("/getGalleryCategory", getGalleryCategories);
 
 // Gallery
-router.post("/addGallery", auth, mediaField, addGallery);
-router.put("/updateGallery/:id", auth, mediaField, updateGallery);
-router.delete("/deleteGallery/:id", auth, deleteGallery);
+router.post("/addGallery",  mediaField, addGallery);
+router.put("/updateGallery/:id",  mediaField, updateGallery);
+router.delete("/deleteGallery/:id",  deleteGallery);
 router.get("/getGallery", getGalleries);
 
 module.exports = router;

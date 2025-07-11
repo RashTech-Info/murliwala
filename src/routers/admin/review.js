@@ -21,11 +21,10 @@ let upload = multer({
   }),
 });
 
-
 router.post("/addReview", upload.array("eventImage", 5), addReview);
 router.get("/getActiveReviews", getActiveReviews);
-router.get("/getAllReviews", auth, getAllReviews);
-router.patch("/updateReview/:id",  updateReview);
-router.delete("/deleteReview/:id",  deleteReview);
+router.get("/getAllReviews", getAllReviews);
+router.patch("/updateReview/:id", updateReview);
+router.delete("/deleteReview/:id", deleteReview);
 
 module.exports = router;
