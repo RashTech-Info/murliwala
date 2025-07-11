@@ -12,8 +12,8 @@ const app = express();
 // CORS Configuration
 app.use(
   cors({
-    origin: "http://localhost:5173", // Replace with your frontend URL
-    methods: ["GET", "POST", "PUT","PATCH" ,"DELETE"],
+    origin: ["http://localhost:5173", "https://murliwalafoodcaterers.com"], // Replace with your frontend URL
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
 );
