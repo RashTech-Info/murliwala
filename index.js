@@ -29,6 +29,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/uploads", express.static("public/uploads"));
 app.use("/gallery", express.static("public/gallery"));
+app.use("/gallery", express.static("public/gallery"));
+app.use("/gallery/videos", express.static("public/gallery/videos"));
+app.use("/gallery/images", express.static("public/gallery/images"));
 
 // Connect to Database
 connectDB();
