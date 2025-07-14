@@ -6,8 +6,8 @@ const adminModel = require("../../model/Admin");
 const transporter = nodemailer.createTransport({
   service: "gmail", // or your mail service
   auth: {
-        user: "developerinfo1212@gmail.com",
-        pass: "cocb txob mfpk zrar", // App password
+    user: "murliwalafoodcaterers@gmail.com",
+        pass: "nkgl dgpw ubep jmjx",
   },
 });
 
@@ -22,7 +22,7 @@ exports.addContactUs = async (req, res) => {
     const adminEmail = adminFind.email;
     // Send email to admin
     await transporter.sendMail({
-      from: "developerinfo1212@gmail.com",
+      from: "murliwalafoodcaterers@gmail.com",
       to: adminEmail, // change to admin email
       subject: "New Contact Inquiry",
       html: `
@@ -37,7 +37,7 @@ exports.addContactUs = async (req, res) => {
 
     // Optional: Send confirmation email to user
     await transporter.sendMail({
-      from:"developerinfo1212@gmail.com",
+      from: "murliwalafoodcaterers@gmail.com",
       to: contact.email,
       subject: "We received your inquiry",
       html: `
