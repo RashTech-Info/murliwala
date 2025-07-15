@@ -40,7 +40,7 @@ exports.adminLogin = async (req, res) => {
     await admin.findByIdAndUpdate(data._id, { auth_key: token });
 
     res.cookie("adjwt", token, {
-      httpOnly: false,
+      httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
