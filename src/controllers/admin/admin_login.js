@@ -6,7 +6,6 @@ exports.adminLogin = async (req, res) => {
     let email = req.body.email;
     let password = req.body.pass;
     let data = await admin.findOne({ email });
-    
 
     if (!data) {
       return res.status(404).json({
@@ -41,6 +40,8 @@ exports.adminLogin = async (req, res) => {
 
     res.cookie("adjwt", token, {
       httpOnly: true,
+      secure: true, // only send over HTTPS
+      sameSite: "None",
       maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
