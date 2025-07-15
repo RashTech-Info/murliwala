@@ -1,1 +1,2 @@
-touch public/uploads/.gitkeep
+echo "" > public/uploads/.gitkeep
+echo "" > public/gallery/.gitkeep
