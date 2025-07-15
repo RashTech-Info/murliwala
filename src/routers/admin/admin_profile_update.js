@@ -5,7 +5,8 @@ const multer = require("multer");
 const {
   Update_admin,
 } = require("../../controllers/admin/admin_profile_update");
-
+const path = require("path");
+const fs = require("fs");
 const uploadPath = path.join(__dirname, "../public/uploads");
 
 // Ensure the folder exists
